@@ -4,7 +4,7 @@ locals {
 
 variable "BQ_Dataset" {
   description = "The name of the BigQuery table the data will be written to."
-  default     = "google-playstore-dataset"
+  default     = "google_playstore_dataset"
   type        = string
 }
 
@@ -29,5 +29,11 @@ variable "Storage_class" {
 variable "Public_Acess" {
   description = "Public access to be inherited or enforced"
   default     = "enforced"
+  type        = string
+}
+
+variable "Location" {
+  description = "Location for BigQuery dataset"
+  default     = "US"
   type        = string
 }

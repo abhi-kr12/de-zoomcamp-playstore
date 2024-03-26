@@ -13,8 +13,8 @@ provider "google" {
 }
 
 
-resource "google_storage_bucket" "zomato-bucket" {
-  name          = "playstore_bucket_${local.current_time}"
+resource "google_storage_bucket" "playstore-bucket" {
+  name          = "playstore-bucket_${local.current_time}"
   location      = var.Region
   storage_class = var.Storage_class
   force_destroy = true
@@ -28,5 +28,5 @@ resource "google_storage_bucket" "zomato-bucket" {
 resource "google_bigquery_dataset" "playstore-dataset-bq" {
   dataset_id = var.BQ_Dataset
   project = var.Project_ID
-  location = var.Region
+  location = var.Location
 }
