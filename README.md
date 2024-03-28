@@ -12,3 +12,19 @@
 -4.[Replication of the project]
 
 ---
+
+## Objective
+
+---
+
+## Technologies
+
+---
+
+## Data Architecture
+
+---
+
+## Replication of the project
+
+---
