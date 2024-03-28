@@ -37,3 +37,7 @@ clean-targets:         # directories to be removed by `dbt clean`
 
 models:
   de_zoomcamp_playstore:
+  staging:
+        materialized: view
+    core:
+        materialized: table
