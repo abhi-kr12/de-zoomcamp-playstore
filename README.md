@@ -49,6 +49,8 @@ This dataset provides comprehensive information about Google Play Store apps, co
 
   The dataset is available for download on [Kaggle](https://www.kaggle.com/datasets/gauthamp10/google-playstore-apps). It can be explored and analyzed using data analysis tools like Python with libraries such as pandas, matplotlib, and seaborn. Additionally, machine learning frameworks like scikit-learn or TensorFlow can be utilized for predictive modeling tasks.
 
+- **Objective**
+
 ---
 
 ## Technologies
