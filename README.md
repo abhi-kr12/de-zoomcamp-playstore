@@ -15,7 +15,6 @@
 ---
 
 ## Description and Objective
-# Google Playstore Apps Dataset
 
 This dataset contains information about Google Play Store apps, including details such as app name, category, rating, reviews, size, and more.
 
