@@ -1,7 +1,7 @@
 # Google Playstore Apps
 
 <p align="center">
-  <img src="images\playstore.jpeg">
+  <img src="images\playstore.jpg">
 </p>
 
 ---
