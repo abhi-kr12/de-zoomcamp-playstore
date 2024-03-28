@@ -1,7 +1,7 @@
 # Google Playstore Apps
 
 <p align="center">
-  <img src="images\SIEN.png">
+  <img src="images\playstore.jpeg">
 </p>
 
 ---
