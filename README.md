@@ -7,14 +7,14 @@
 ---
 ## Index
 
-- [Objective](#objective)
+- [Description and Objective](#description-and-objective)
 - [Technologies](#technologies)
 - [Data Architecture](#data-architecture)
 - [Replication of the project](#replication-of-the-project)
 
 ---
 
-## Objective
+## Description and Objective
 
 ---
 
