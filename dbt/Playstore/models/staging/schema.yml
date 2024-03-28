@@ -1,0 +1,7 @@
+version: 2
+sources:
+  - name: staging
+    database: playstore-abhi
+    schema: google_playstore_dataset
+    tables:
+      - name: playstore
