@@ -53,30 +53,30 @@ You can download the dataset from [Kaggle](https://www.kaggle.com/datasets/gauth
 
 ## Technologies
 
-## Terraform
+	Terraform
 
-[Terraform](https://www.terraform.io/) is an open-source infrastructure-as-code software tool provided by HashiCorp. It allows users to define and provision data center infrastructure using a declarative configuration language known as HashiCorp Configuration Language (HCL), or optionally JSON.
+	[Terraform](https://www.terraform.io/) is an open-source infrastructure-as-code software tool provided by HashiCorp. It allows users to define and provision data center infrastructure using a declarative configuration language known as HashiCorp Configuration Language (HCL), or optionally JSON.
 
-## Google Cloud Platform
+	Google Cloud Platform
 
-[Google Cloud Platform (GCP)](https://cloud.google.com/) offers a suite of cloud computing services, including:
+	[Google Cloud Platform (GCP)](https://cloud.google.com/) offers a suite of cloud computing services, including:
 
-- **Google Cloud Storage**: A scalable object storage service for storing and accessing data.
-- **BigQuery**: A fully managed, serverless data warehouse for analytics.
-- **Google Compute Engine**: Infrastructure-as-a-service (IaaS) virtual machines (VMs) for running workloads on Google's infrastructure.
-- **Prefect**: A workflow orchestration tool for building, monitoring, and managing data pipelines on GCP.
+	- **Google Cloud Storage**: A scalable object storage service for storing and accessing data.
+	- **BigQuery**: A fully managed, serverless data warehouse for analytics.
+	- **Google Compute Engine**: Infrastructure-as-a-service (IaaS) virtual machines (VMs) for running workloads on Google's infrastructure.
+	- **Prefect**: A workflow orchestration tool for building, monitoring, and managing data pipelines on GCP.
 
-## Mage
+	Mage
 
-[Mage](https://www.mage.ai/) is a powerful orchestration tool that allows developers to define and automate tasks using Go code. It is designed to simplify the process of building, testing, and deploying software projects by providing a flexible and extensible framework for defining custom workflows.
+	[Mage](https://www.mage.ai/) is a powerful orchestration tool that allows developers to define and automate tasks using Go code. It is designed to simplify the process of building, testing, and deploying software projects by providing a flexible and extensible framework for defining custom workflows.
 
-## Data Build Tool (dbt)
+	Data Build Tool (dbt)
 
-[dbt](https://www.getdbt.com/) is a data transformation tool that enables analysts and engineers to transform data in their warehouse more effectively.
+	[dbt](https://www.getdbt.com/) is a data transformation tool that enables analysts and engineers to transform data in their warehouse more effectively.
 
-## Looker Studio
+	Looker Studio
 
-[Looker Studio](https://looker.com/platform/studio) is a free tool that turns your data into informative, easy-to-read, easy-to-share, and fully customizable dashboards and reports.
+	[Looker Studio](https://looker.com/platform/studio) is a free tool that turns your data into informative, easy-to-read, easy-to-share, and fully customizable dashboards and reports.
 
 
 ---
