@@ -51,6 +51,13 @@ This dataset provides comprehensive information about Google Play Store apps, co
 
 - **Objective**
 
+  The objective of this project is to establish an efficient data pipeline for processing and analyzing the Google Play Store apps dataset. The key goals include:
+
+  - Designing and implementing a scalable data pipeline to ingest, clean, and transform the dataset.
+  - Developing automation scripts for infrastructure provisioning and task orchestration.
+  - Leveraging cloud services for storage, data processing, and visualization.
+  - Demonstrating the end-to-end pipeline from data ingestion to report generation, showcasing insights into app market trends, user behavior, and more.
+
 ---
 
 ## Technologies
