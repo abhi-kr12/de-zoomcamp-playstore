@@ -6,10 +6,11 @@
 
 ---
 ## Index
--1.[Objective]
--2.[Technologies]
--3.[Data Architecture]
--4.[Replication of the project]
+
+- [Objective](#objective)
+- [Technologies](#technologies)
+- [Data Architecture](#data-architecture)
+- [Replication of the project](#replication-of-the-project)
 
 ---
 
