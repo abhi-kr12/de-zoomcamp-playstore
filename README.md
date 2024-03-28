@@ -6,3 +6,9 @@
 
 ---
 ## Index
+-1.[Objective]
+-2.[Technologies]
+-3.[Data Architecture]
+-4.[Replication of the project]
+
+---
