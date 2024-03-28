@@ -19,7 +19,7 @@ select
     category `Category`,
     rating `Rating`,
     rating_count `Rating_count`,
-    installs `Install Range`,
+    installs `Install_Range`,
     minimum_installs  `Minimum_Installs`,
     maximum_installs `Total_Installs`,
     free  `Free`,

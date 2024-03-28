@@ -17,6 +17,6 @@ c.`Free`,
 c.`Price`
  from {{ ref('dim_app_details') }} a
 inner join {{ ref('dim_app_misc') }} b
-on a.`App ID` = b.`App ID`
+on a.`App_ID` = b.`App_ID`
 inner join {{ ref('fact_app') }} c
-on b.`App ID` = c.`App ID`
+on b.`App_ID` = c.`App_ID`
