@@ -1,4 +1,4 @@
 {{ config(materialized="table") }}
 
-select `App ID`, `Developer ID`, `Developer Website`, `Developer Email`
+select `App_ID`, `Developer_ID`, `Developer_Website`, `Developer_Email`
 from {{ ref("stg_staging__playstore") }}

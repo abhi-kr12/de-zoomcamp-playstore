@@ -1,12 +1,12 @@
 {{ config(materialized="table") }}
 
 select
-    `App ID`,
+    `App_ID`,
     `Rating`,
-    `Rating count`,
-    `Install Range`,
-    `Minimum Installs`,
-    `Total Installs`,
+    `Rating_count`,
+    `Install_Range`,
+    `Minimum_Installs`,
+    `Total_Installs`,
     `Free`,
     `Price`
 from {{ ref("stg_staging__playstore") }}

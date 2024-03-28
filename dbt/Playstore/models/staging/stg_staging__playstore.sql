@@ -14,29 +14,29 @@ playstore_data as (
 )
 
 select
-    app_name `App Name`,
-    app_id `App ID`,
+    app_name `App_Name`,
+    app_id `App_ID`,
     category `Category`,
     rating `Rating`,
-    rating_count `Rating count`,
+    rating_count `Rating_count`,
     installs `Install Range`,
-    minimum_installs  `Minimum Installs`,
-    maximum_installs `Total Installs`,
+    minimum_installs  `Minimum_Installs`,
+    maximum_installs `Total_Installs`,
     free  `Free`,
     price `Price`,
     currency `Currency`,
     size `Size`,
-    minimum_android `Minimum Android`,
-    developer_id `Developer ID`,
-    developer_website `Developer Website`,
-    developer_email `Developer Email`,
-    cast(released as Date) `Release Date`,
-    last_updated `Last Updated`,
-    content_rating `Content Rating`,
-    privacy_policy `Privacy Policy`,
-    ad_supported `Ad Supported`,
-    in_app_purchases `In App Purchases`,
-    editors_choice `Editor Choice`
+    minimum_android `Minimum_Android`,
+    developer_id `Developer_ID`,
+    developer_website `Developer_Website`,
+    developer_email `Developer_Email`,
+    cast(released as Date) `Release_Date`,
+    last_updated `Last_Updated`,
+    content_rating `Content_Rating`,
+    privacy_policy `Privacy_Policy`,
+    ad_supported `Ad_Supported`,
+    in_app_purchases `In_App_Purchases`,
+    editors_choice `Editor_Choice`
 
 from playstore_data
 

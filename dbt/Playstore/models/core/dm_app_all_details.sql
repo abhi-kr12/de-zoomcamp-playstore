@@ -4,15 +4,15 @@
     )
 }}
 
-select a.`App Name`,
+select a.`App_Name`,
 a.`Category`,
-b.`Release Date`,
-b.`Content Rating`,
-b.`Ad Supported`,
-b.`In App Purchases`,
+b.`Release_Date`,
+b.`Content_Rating`,
+b.`Ad_Supported`,
+b.`In_App_Purchases`,
 c.`Rating`,
-c.`Rating Count`,
-c.`Total Installs`,
+c.`Rating_Count`,
+c.`Total_Installs`,
 c.`Free`,
 c.`Price`
  from {{ ref('dim_app_details') }} a
