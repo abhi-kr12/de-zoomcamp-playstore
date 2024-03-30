@@ -133,9 +133,9 @@ Replication steps are given in accordance with Windows OS and Google Cloud Platf
    - We can make it easier to login by editing the config file in the SSH folder. We can add this in the config file:
      ```
      Host de-zoomcamp
-     Hostname 34.31.208.86
-     User abhi
-     IdentityFile c:/Users/bhind/.ssh/gcp
+     Hostname "IP of the VM"
+     User "username of SSH key"
+     IdentityFile "location of the SSH private key"
      ```
      where `Host` is the name used to login, `Hostname` is the external IP of the VM, `User` is the Username of the SSH key, and `IdentityFile` is the location of the private SSH key.
    - Once the config file is saved, we can login to the VM using the `ssh de-zoomcamp` command.
