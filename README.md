@@ -141,7 +141,7 @@ Replication steps are given in accordance with Windows OS and Google Cloud Platf
    - Once the config file is saved, we can login to the VM using the `ssh de-zoomcamp` command.
    - We can also use VS Code for simpler file operations. We need to install the SSH-Terminal extension in VS Code, then connect to the VM and we get the file explorer and editor for the VM. This makes many tasks very simple.
 6. **Install Anaconda on VM**
-   - Download Anaconda package from "https://www.anaconda.com/download". The version is 64-Bit (x86) Installer. Copy the link of this version.
+   - Download Anaconda package from "https://www.anaconda.com/download". The version is 64-Bit (x86) Installer. Copy the download link of this version.
    - In the VM type command 'wget url' where url is the link copied above.
    - Once downloaded use bash to install the downloaded package.
    - It will prompt to read the license and then type yes and press enter. Check the location of install and press enter. After the installation is done, you are prompted if Anaconda should be added to path (conda init), type yes and press enter.
