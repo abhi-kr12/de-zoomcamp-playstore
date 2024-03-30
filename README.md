@@ -198,5 +198,16 @@ Replication steps are given in accordance with Windows OS and Google Cloud Platf
     - Install Mage using `pip install mage-ai`.
 
 11. **Configure Mage**
-    - [Add steps to configure Mage here]
+    - cd into `de-zoomcamp-playstore` directory in the VM.
+    - Type in command `mage start mage-playstore`.
+    - It will process for some time and then we can open `localhost:6789` in our local machine. You can use VS code for port forwarding.
+    - If everything is right you should find two pipelines in Mage.
+    - We have two pipelines, 'api_to_gcs' and 'gcs_to_bigquery'.
+        - **api_to_gcs:**
+            - In the data loader part, we will be pulling the data from the GCS URL. The Kaggle data is downloaded, uploaded to GCS, and the file is made public. The dataset can be found at [https://storage.googleapis.com/public-dataset-playstore/Google-Playstore.csv.zip](https://storage.googleapis.com/public-dataset-playstore/Google-Playstore.csv.zip). We will be using pandas `read_csv` function to read the data.
+            - In the transformer, we are converting the datatype and format of the column 'Released'.
+            - In the data exporter, we are pushing the dataframe read to a Parquet file into the GCS bucket. The GCS bucket will be created after Terraform apply. Please copy the bucket name and paste it here.
+        - **gcs_to_bigquery:**
+            - In the data loader, we will be pulling the Parquet file stored in GCS from the earlier pipeline. Please enter the bucket name which is created after Terraform apply.
+            - In the data exporter, we will be pushing all the data to BigQuery. The table id will be 'your_project_id.google_playstore_dataset.playstore'. `google_playstore_dataset` is the dataset created after Terraform apply and `playstore` will be the table name.
 ---
