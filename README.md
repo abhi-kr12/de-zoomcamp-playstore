@@ -99,4 +99,9 @@ This dataset provides comprehensive information about Google Play Store apps, co
 
 ## Replication of the project
 
+Replication steps are given in accordance to Windows OS and Google Cloud Platform.
+
+Steps to be followed:
+1). Create an SSH key to login to the virtual machine created
+
 ---
