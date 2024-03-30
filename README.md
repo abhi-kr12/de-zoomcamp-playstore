@@ -125,6 +125,21 @@ Replication steps are given in accordance with Windows OS and Google Cloud Platf
    - In the second step select all the roles required. For this project, we require the 'Storage Admin' and 'BigQuery Admin' roles. Add these 2 roles and click on done.
    - Now you can see the created service account. Now click on actions and then manage keys. Click on add key and select Create new key. Select the format as JSON and a JSON file will be downloaded into your local machine. Keep this key safe.
 5. **Login to the VM**
+   - We can login to the created VM using SSH and the private key created using the command:
+     ```
+     ssh -i ~/.ssh/KEY_FILENAME USERNAME@IP_OF_THE_VM
+     ```
+     where `KEY_FILENAME` and `USERNAME` are the arguments given during the SSH key creation, and `IP_OF_THE_VM` is the External IP address of the VM instance created. Click yes when prompted to add the IP address to known hosts.
+   - We can make it easier to login by editing the config file in the SSH folder. We can add this in the config file:
+     ```
+     Host de-zoomcamp
+     Hostname 34.31.208.86
+     User abhi
+     IdentityFile c:/Users/bhind/.ssh/gcp
+     ```
+     where `Host` is the name used to login, `Hostname` is the external IP of the VM, `User` is the Username of the SSH key, and `IdentityFile` is the location of the private SSH key.
+   - Once the config file is saved, we can login to the VM using the `ssh de-zoomcamp` command.
+   - We can also use VS Code for simpler file operations. We need to install the SSH-Terminal extension in VS Code, then connect to the VM and we get the file explorer and editor for the VM. This makes many tasks very simple.
 6. **Install Anaconda on VM**
 7. **Git clone this repository.**
 8. **Install Terraform. Install Unzip. Add bin to path.**
