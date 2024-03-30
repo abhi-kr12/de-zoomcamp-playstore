@@ -171,4 +171,6 @@ Replication steps are given in accordance with Windows OS and Google Cloud Platf
 10. **Install required packages**
     - Install all the required packages using `pip install -r requirements.txt`.
     - Install Mage using `pip install mage-ai`.
+11. **Configure Mage**
+    - [Add steps to configure Mage here]
 ---
