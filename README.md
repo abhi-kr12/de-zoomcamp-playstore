@@ -161,6 +161,12 @@ Replication steps are given in accordance with Windows OS and Google Cloud Platf
    - Unzip the downloaded Terraform zip file which gives an executable file. Now you can delete the Terraform zip file if required.
    - For Terraform to work we have to insert the bin path as environment variable. Type in command `echo $PATH`. Copy the output and in the end add a colon and the bin directory path. Enter this in command `export PATH=path_value` where `path_value` is concatenated path.
    - Check if Terraform is working by typing in command `terraform -version`. If a proper version is returned, Terraform is working or else check if the bin has been inserted in the path properly.
-9. **Send service account key to VM.**
+9. **Send service account key to VM**
+   - Open Git Bash in your local.
+   - Navigate to the directory where the service account JSON key is saved.
+   - Rename it to 'my_creds_playstore.json'.
+   - Now SFTP into the VM using `ssh de-zoomcamp`.
+   - `cd` into the `de-zoomcamp-playstore` directory.
+   - Now use command `put my_creds_playstore.json` and the file will be copied from local to the `de-zoomcamp-playstore` directory in the VM.
 10. **Install required packages.**
 ---
