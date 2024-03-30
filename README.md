@@ -120,6 +120,10 @@ Replication steps are given in accordance with Windows OS and Google Cloud Platf
    - Specify an instance name if required. Change the location if required. The type of instance chosen is 'e2-standard-4' which has 4 vCPU, 2 cores, and 16 GB of RAM.
    - Under Boot disk, change the Operating System to Ubuntu and the version to Ubuntu 20.04 LTS. Increase the size to 30 GB. Click on create to create the VM instance.
 4. **Create Service account on GCP**
+   - Under the Navigation Menu, hover over IAM and Admin and select Service Accounts.
+   - Click on CREATE SERVICE ACCOUNT. Give a Service Account name and description. The account ID should be populated automatically. Click on create and continue.
+   - In the second step select all the roles required. For this project, we require the 'Storage Admin' and 'BigQuery Admin' roles. Add these 2 roles and click on done.
+   - Now you can see the created service account. Now click on actions and then manage keys. Click on add key and select Create new key. Select the format as JSON and a JSON file will be downloaded into your local machine. Keep this key safe.
 5. **Install Anaconda on VM**
 6. **Git clone this repository.**
 7. **Install Terraform. Install Unzip. Add bin to path.**
