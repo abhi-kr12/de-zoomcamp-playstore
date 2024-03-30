@@ -211,4 +211,7 @@ Replication steps are given in accordance with Windows OS and Google Cloud Platf
             - In the data loader, we will be pulling the Parquet file stored in GCS from the earlier pipeline. Please enter the bucket name which is created after Terraform apply.
             - In the data exporter, we will be pushing all the data to BigQuery. The table id will be 'your_project_id.google_playstore_dataset.playstore'. `google_playstore_dataset` is the dataset created after Terraform apply and `playstore` will be the table name.
     - We can add trigger to batch process it everyday. For this we have to keep the VM instance running all the time. We can also link the first pipeline to the second pipeline.
+
+12. **dbt**
+    - [Add steps for configuring dbt here]
 ---
