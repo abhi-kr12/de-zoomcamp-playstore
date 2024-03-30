@@ -91,6 +91,10 @@ This dataset provides comprehensive information about Google Play Store apps, co
 
 ## Data Architecture
 
+<p align="center">
+  <img src="images\dfd.jpg">
+</p>
+
 ---
 
 ## Replication of the project
