@@ -104,6 +104,13 @@ Replication steps are given in accordance to Windows OS and Google Cloud Platfor
 **Steps to be followed:**
 
 1. **Create an SSH key to login to the virtual machine created**
+   - Open Git Bash
+   - Navigate to the SSH directory using `cd ~/.ssh`
+   - Use this command to create an SSH key:
+     ```
+     ssh-keygen -t rsa -f ~/.ssh/KEY_FILENAME -C USERNAME -b 2048
+     ```
+     where `KEY_FILENAME` is the key name and `USERNAME` will be your name
 2. **Upload the public SSH key to GCP**
 3. **Create the VM on GCP**
 4. **Create Service account on GCP**
@@ -112,5 +119,4 @@ Replication steps are given in accordance to Windows OS and Google Cloud Platfor
 7. **Install Terraform. Install Unzip. Add bin to path.**
 8. **Send service account key to VM.**
 9. **Install required packages.**
-
 ---
