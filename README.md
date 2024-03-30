@@ -133,14 +133,19 @@ Replication steps are given in accordance with Windows OS and Google Cloud Platf
    - We can make it easier to login by editing the config file in the SSH folder. We can add this in the config file:
      ```
      Host de-zoomcamp
-     Hostname "IP of the VM"
-     User "username of SSH key"
-     IdentityFile "location of the SSH private key"
+     Hostname 34.31.208.86
+     User abhi
+     IdentityFile c:/Users/bhind/.ssh/gcp
      ```
      where `Host` is the name used to login, `Hostname` is the external IP of the VM, `User` is the Username of the SSH key, and `IdentityFile` is the location of the private SSH key.
    - Once the config file is saved, we can login to the VM using the `ssh de-zoomcamp` command.
    - We can also use VS Code for simpler file operations. We need to install the SSH-Terminal extension in VS Code, then connect to the VM and we get the file explorer and editor for the VM. This makes many tasks very simple.
 6. **Install Anaconda on VM**
+   - Download Anaconda package from "https://www.anaconda.com/download". The version is 64-Bit (x86) Installer. Copy the link of this version.
+   - In the VM type command 'wget url' where url is the link copied above.
+   - Once downloaded use bash to install the downloaded package.
+   - It will prompt to read the license and then type yes and press enter. Check the location of install and press enter. After the installation is done, you are prompted if Anaconda should be added to path (conda init), type yes and press enter.
+   - You can now delete the downloaded Anaconda file as the installation is done.
 7. **Git clone this repository.**
 8. **Install Terraform. Install Unzip. Add bin to path.**
 9. **Send service account key to VM.**
