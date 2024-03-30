@@ -111,8 +111,10 @@ Replication steps are given in accordance to Windows OS and Google Cloud Platfor
      ssh-keygen -t rsa -f ~/.ssh/KEY_FILENAME -C USERNAME -b 2048
      ```
      where `KEY_FILENAME` is the key name and `USERNAME` will be your name
-   - Now if you ls into the directory you should see two keys, one public and one private. Public key is the one which should be uploaded to GCP.
 2. **Upload the public SSH key to GCP**
+   - Before uploading the SSH key, enable Compute API, Storage API, and BigQuery API on Google Cloud Platform.
+   - Copy the contents of the public SSH key created in the previous step.
+   - Under the Navigation Menu, go to Compute Engine. If you scroll under Compute Engine, you should be able to find a tab named Metadata. Click on it. Click on the SSH KEYS tab. Add the copied contents from the public SSH key and save. Whichever instance is created now can be logged in via the same SSH key.
 3. **Create the VM on GCP**
 4. **Create Service account on GCP**
 5. **Install Anaconda on VM**
