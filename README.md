@@ -73,7 +73,6 @@ This dataset provides comprehensive information about Google Play Store apps, co
   - **Google Cloud Storage**: A scalable object storage service for storing and accessing data.
   - **BigQuery**: A fully managed, serverless data warehouse for analytics.
   - **Google Compute Engine**: Infrastructure-as-a-service (IaaS) virtual machines (VMs) for running workloads on Google's infrastructure.
-  - **Prefect**: A workflow orchestration tool for building, monitoring, and managing data pipelines on GCP.
 
 - Mage
 
