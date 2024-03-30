@@ -111,7 +111,7 @@ Replication steps are given in accordance to Windows OS and Google Cloud Platfor
      ssh-keygen -t rsa -f ~/.ssh/KEY_FILENAME -C USERNAME -b 2048
      ```
      where `KEY_FILENAME` is the key name and `USERNAME` will be your name
-  - Now if you ls into the directory you should see two keys, one public and one private. Public key is the one which should be uploaded to GCP.
+   - Now if you ls into the directory you should see two keys, one public and one private. Public key is the one which should be uploaded to GCP.
 2. **Upload the public SSH key to GCP**
 3. **Create the VM on GCP**
 4. **Create Service account on GCP**
