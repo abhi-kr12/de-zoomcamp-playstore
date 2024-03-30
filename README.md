@@ -99,7 +99,7 @@ This dataset provides comprehensive information about Google Play Store apps, co
 
 ### Replication of the Project
 
-Replication steps are given in accordance to Windows OS and Google Cloud Platform.
+Replication steps are given in accordance with Windows OS and Google Cloud Platform.
 
 **Steps to be followed:**
 
@@ -116,6 +116,9 @@ Replication steps are given in accordance to Windows OS and Google Cloud Platfor
    - Copy the contents of the public SSH key created in the previous step.
    - Under the Navigation Menu, go to Compute Engine. If you scroll under Compute Engine, you should be able to find a tab named Metadata. Click on it. Click on the SSH KEYS tab. Add the copied contents from the public SSH key and save. Whichever instance is created now can be logged in via the same SSH key.
 3. **Create the VM on GCP**
+   - Under Compute Engine, click on VM instances and then Create Instance.
+   - Specify an instance name if required. Change the location if required. The type of instance chosen is 'e2-standard-4' which has 4 vCPU, 2 cores, and 16 GB of RAM.
+   - Under Boot disk, change the Operating System to Ubuntu and the version to Ubuntu 20.04 LTS. Increase the size to 30 GB. Click on create to create the VM instance.
 4. **Create Service account on GCP**
 5. **Install Anaconda on VM**
 6. **Git clone this repository.**
