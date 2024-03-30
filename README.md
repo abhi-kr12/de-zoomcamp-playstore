@@ -168,5 +168,7 @@ Replication steps are given in accordance with Windows OS and Google Cloud Platf
    - Now SFTP into the VM using `ssh de-zoomcamp`.
    - `cd` into the `de-zoomcamp-playstore` directory.
    - Now use command `put my_creds_playstore.json` and the file will be copied from local to the `de-zoomcamp-playstore` directory in the VM.
-10. **Install required packages.**
+10. **Install required packages**
+    - Install all the required packages using `pip install -r requirements.txt`.
+    - Install Mage using `pip install mage-ai`.
 ---
