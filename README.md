@@ -213,5 +213,14 @@ Replication steps are given in accordance with Windows OS and Google Cloud Platf
     - We can add trigger to batch process it everyday. For this we have to keep the VM instance running all the time. We can also link the first pipeline to the second pipeline.
 
 12. **dbt**
-    - [Add steps for configuring dbt here]
+    - In dbt cloud, create a new account and a project.
+    - Go to account settings and then to projects. Click on the project created. Change the name, connect to your repository, connect to the BigQuery table created, and add a project subdirectory if required. Save the changes.
+    - Go to the credentials tab and check if the BigQuery connection is correct. Add a dataset name for the development environment.
+    - Now under Deploy click on Environments. Create a new Development environment.
+    - Now under Develop click on Cloud IDE.
+    - Initialize the db project to get all the initial files in your repository.
+    - Now you can copy all the files under the models directory and dbt_project.yml file from the project repository (de-zoomcamp-playstore) to your dbt project.
+    - Now run command `dbt build --vars '{"is_test_run": "false"}'` to run all models and push data to BigQuery.
+    - After checking if everything is fine in development, create a new environment for deployment. A new production dataset name should be given where the data will be stored. We can then create jobs to run the dbt project. These jobs can run on schedule or can be triggered manually or via an API request.
+    - We will have two datasets once everything is done, one from development and one from deployment.
 ---
