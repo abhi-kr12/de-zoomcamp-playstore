@@ -111,19 +111,36 @@ Replication steps are given in accordance with Windows OS and Google Cloud Platf
      ssh-keygen -t rsa -f ~/.ssh/KEY_FILENAME -C USERNAME -b 2048
      ```
      where `KEY_FILENAME` is the key name and `USERNAME` will be your name
+   - Open Git Bash
+   - cd to ssh directory using cd ~/.ssh
+   - use this command to create ssh key "ssh-keygen -t rsa -f ~/.ssh/KEY_FILENAME -C USERNAME -b 2048" where KEY_FILENAME is the key name and USERNAME will be your name
+
 2. **Upload the public SSH key to GCP**
    - Before uploading the SSH key, enable Compute API, Storage API, and BigQuery API on Google Cloud Platform.
    - Copy the contents of the public SSH key created in the previous step.
    - Under the Navigation Menu, go to Compute Engine. If you scroll under Compute Engine, you should be able to find a tab named Metadata. Click on it. Click on the SSH KEYS tab. Add the copied contents from the public SSH key and save. Whichever instance is created now can be logged in via the same SSH key.
+   - Before uploading the SSH key, enable Compute API, Storage API and BigQuery API on Google Cloud Platform.
+   - Copy the contents of the public SSH key created in the previous step.
+   - Under Navigation Menu, go to Compute engine. If you scroll under Compute engine, you should be able to find a tab named Metadata. Click on it. Click on the SSH KEYS tab. Add the copied contents from the public SSH key and save. Whichever instance is created now can be logged in via the same SSH key.
+
 3. **Create the VM on GCP**
    - Under Compute Engine, click on VM instances and then Create Instance.
    - Specify an instance name if required. Change the location if required. The type of instance chosen is 'e2-standard-4' which has 4 vCPU, 2 cores, and 16 GB of RAM.
    - Under Boot disk, change the Operating System to Ubuntu and the version to Ubuntu 20.04 LTS. Increase the size to 30 GB. Click on create to create the VM instance.
+   - Under Compute Engine click on VM instances and then Create Instance.
+   - Specify an instance name if required. Change the location if required. The type of instance chosen is 'e2-standard-4' which has 4 vCPU, 2 cores and 16 GB of RAM. 
+   - Under Boot disk, change the Operating System to Ubuntu and the version to Ubuntu 20.04 LTS. Increase the size to 30 GB. Click on create to create the VM instance.
+
 4. **Create Service account on GCP**
    - Under the Navigation Menu, hover over IAM and Admin and select Service Accounts.
    - Click on CREATE SERVICE ACCOUNT. Give a Service Account name and description. The account ID should be populated automatically. Click on create and continue.
    - In the second step select all the roles required. For this project, we require the 'Storage Admin' and 'BigQuery Admin' roles. Add these 2 roles and click on done.
    - Now you can see the created service account. Now click on actions and then manage keys. Click on add key and select Create new key. Select the format as JSON and a JSON file will be downloaded into your local machine. Keep this key safe.
+   - Under Navigation Menu, hower over IAM and Admin and select Service Accounts.
+   - Click on CREATE SERVICE ACCOUNT. Give a Service Account name and description. The account ID should be populated automatically. Click on create and continue.
+   - In the second step select all the roles required. For this project we require the 'Storage Admin' and 'BigQuery Admin' roles. Add these 2 roles and click on done.
+   - Now you can see the created service account. Now click on actions and then manage keys. Click on add key and select Create new key. Select the format as JSON and a JSON file will be downloaded into your local machine. Keep this key safe.
+
 5. **Login to the VM**
    - We can login to the created VM using SSH and the private key created using the command:
      ```
@@ -140,12 +157,14 @@ Replication steps are given in accordance with Windows OS and Google Cloud Platf
      where `Host` is the name used to login, `Hostname` is the external IP of the VM, `User` is the Username of the SSH key, and `IdentityFile` is the location of the private SSH key.
    - Once the config file is saved, we can login to the VM using the `ssh de-zoomcamp` command.
    - We can also use VS Code for simpler file operations. We need to install the SSH-Terminal extension in VS Code, then connect to the VM and we get the file explorer and editor for the VM. This makes many tasks very simple.
+
 6. **Install Anaconda on VM**
    - Download Anaconda package from "https://www.anaconda.com/download". The version is 64-Bit (x86) Installer. Copy the link of this version.
    - In the VM type command 'wget url' where url is the link copied above.
    - Once downloaded use bash to install the downloaded package.
    - It will prompt to read the license and then type yes and press enter. Check the location of install and press enter. After the installation is done, you are prompted if Anaconda should be added to path (conda init), type yes and press enter.
    - You can now delete the downloaded Anaconda file as the installation is done.
+
 7. **Git clone this repository.**
    - Clone this repository to the VM using command:
      ```
@@ -153,6 +172,7 @@ Replication steps are given in accordance with Windows OS and Google Cloud Platf
      ```
    - `cd` into `de-zoomcamp-playstore`.
    - Check if all the directories are present which are `Terraform`, `dbt/playstore`, `mage-playstore`, and the files `.gitignore` and `requirements.txt`.
+
 8. **Install Terraform**
    - Copy the download link for Terraform AMD64 version for Linux from this website [https://developer.hashicorp.com/terraform/install](https://developer.hashicorp.com/terraform/install).
    - Create a new directory called bin in the VM root.
@@ -161,6 +181,10 @@ Replication steps are given in accordance with Windows OS and Google Cloud Platf
    - Unzip the downloaded Terraform zip file which gives an executable file. Now you can delete the Terraform zip file if required.
    - For Terraform to work we have to insert the bin path as environment variable. Type in command `echo $PATH`. Copy the output and in the end add a colon and the bin directory path. Enter this in command `export PATH=path_value` where `path_value` is concatenated path.
    - Check if Terraform is working by typing in command `terraform -version`. If a proper version is returned, Terraform is working or else check if the bin has been inserted in the path properly.
+   - Once Terraform is installed, type in `terraform init` to initialize. Then type in `terraform plan` to check what resources will be created. If you notice the bucket name is "playstore-bucket"+local_time. This is done so that the bucket name can be globally unique.
+   - Once you check the plan and satisfied, type in command `terraform apply` and type in yes to create the resources.
+   - Once the use case is finished, you can delete all the resources using `terraform destroy`.
+
 9. **Send service account key to VM**
    - Open Git Bash in your local.
    - Navigate to the directory where the service account JSON key is saved.
@@ -168,9 +192,11 @@ Replication steps are given in accordance with Windows OS and Google Cloud Platf
    - Now SFTP into the VM using `ssh de-zoomcamp`.
    - `cd` into the `de-zoomcamp-playstore` directory.
    - Now use command `put my_creds_playstore.json` and the file will be copied from local to the `de-zoomcamp-playstore` directory in the VM.
+
 10. **Install required packages**
     - Install all the required packages using `pip install -r requirements.txt`.
     - Install Mage using `pip install mage-ai`.
+
 11. **Configure Mage**
     - [Add steps to configure Mage here]
 ---
