@@ -97,19 +97,20 @@ This dataset provides comprehensive information about Google Play Store apps, co
 
 ---
 
-## Replication of the project
+### Replication of the Project
 
 Replication steps are given in accordance to Windows OS and Google Cloud Platform.
 
-Steps to be followed:
-1). Create an SSH key to login to the virtual machine created
-2). Upload the public SSH key to GCP
-3). Create the VM on GCP
-4). Create Service account on GCP
-5). Install Anaconda on VM
-6). Git clone this repository.
-7). Install Terraform. Install Unzip. Add bin to path.
-8). Send service account key to VM.
-9). Install required packages.
+**Steps to be followed:**
+
+1. **Create an SSH key to login to the virtual machine created**
+2. **Upload the public SSH key to GCP**
+3. **Create the VM on GCP**
+4. **Create Service account on GCP**
+5. **Install Anaconda on VM**
+6. **Git clone this repository.**
+7. **Install Terraform. Install Unzip. Add bin to path.**
+8. **Send service account key to VM.**
+9. **Install required packages.**
 
 ---
