@@ -124,9 +124,10 @@ Replication steps are given in accordance with Windows OS and Google Cloud Platf
    - Click on CREATE SERVICE ACCOUNT. Give a Service Account name and description. The account ID should be populated automatically. Click on create and continue.
    - In the second step select all the roles required. For this project, we require the 'Storage Admin' and 'BigQuery Admin' roles. Add these 2 roles and click on done.
    - Now you can see the created service account. Now click on actions and then manage keys. Click on add key and select Create new key. Select the format as JSON and a JSON file will be downloaded into your local machine. Keep this key safe.
-5. **Install Anaconda on VM**
-6. **Git clone this repository.**
-7. **Install Terraform. Install Unzip. Add bin to path.**
-8. **Send service account key to VM.**
-9. **Install required packages.**
+5. **Login to the VM**
+6. **Install Anaconda on VM**
+7. **Git clone this repository.**
+8. **Install Terraform. Install Unzip. Add bin to path.**
+9. **Send service account key to VM.**
+10. **Install required packages.**
 ---
