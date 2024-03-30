@@ -153,7 +153,14 @@ Replication steps are given in accordance with Windows OS and Google Cloud Platf
      ```
    - `cd` into `de-zoomcamp-playstore`.
    - Check if all the directories are present which are `Terraform`, `dbt/playstore`, `mage-playstore`, and the files `.gitignore` and `requirements.txt`.
-8. **Install Terraform. Install Unzip. Add bin to path.**
+8. **Install Terraform**
+   - Copy the download link for Terraform AMD64 version for Linux from this website [https://developer.hashicorp.com/terraform/install](https://developer.hashicorp.com/terraform/install).
+   - Create a new directory called bin in the VM root.
+   - `cd` into bin and then type in command `wget url` where `url` is the download link copied above.
+   - Type in command `sudo apt-get install unzip` to install unzip in the VM to extract the downloaded zip file.
+   - Unzip the downloaded Terraform zip file which gives an executable file. Now you can delete the Terraform zip file if required.
+   - For Terraform to work we have to insert the bin path as environment variable. Type in command `echo $PATH`. Copy the output and in the end add a colon and the bin directory path. Enter this in command `export PATH=path_value` where `path_value` is concatenated path.
+   - Check if Terraform is working by typing in command `terraform -version`. If a proper version is returned, Terraform is working or else check if the bin has been inserted in the path properly.
 9. **Send service account key to VM.**
 10. **Install required packages.**
 ---
