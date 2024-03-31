@@ -111,34 +111,21 @@ Replication steps are given in accordance with Windows OS and Google Cloud Platf
      ssh-keygen -t rsa -f ~/.ssh/KEY_FILENAME -C USERNAME -b 2048
      ```
      where `KEY_FILENAME` is the key name and `USERNAME` will be your name
-   - Open Git Bash
-   - cd to ssh directory using cd ~/.ssh
-   - use this command to create ssh key "ssh-keygen -t rsa -f ~/.ssh/KEY_FILENAME -C USERNAME -b 2048" where KEY_FILENAME is the key name and USERNAME will be your name
 
 2. **Upload the public SSH key to GCP**
    - Before uploading the SSH key, create a new project in GCP and enable Compute API, Storage API, and BigQuery API on Google Cloud Platform.
    - Copy the contents of the public SSH key created in the previous step.
    - Under the Navigation Menu, go to Compute Engine. If you scroll under Compute Engine, you should be able to find a tab named Metadata. Click on it. Click on the SSH KEYS tab. Add the copied contents from the public SSH key and save. Whichever instance is created now can be logged in via the same SSH key.
-   - Before uploading the SSH key, enable Compute API, Storage API and BigQuery API on Google Cloud Platform.
-   - Copy the contents of the public SSH key created in the previous step.
-   - Under Navigation Menu, go to Compute engine. If you scroll under Compute engine, you should be able to find a tab named Metadata. Click on it. Click on the SSH KEYS tab. Add the copied contents from the public SSH key and save. Whichever instance is created now can be logged in via the same SSH key.
 
 3. **Create the VM on GCP**
    - Under Compute Engine, click on VM instances and then Create Instance.
    - Specify an instance name if required. Change the location if required. The type of instance chosen is 'e2-standard-4' which has 4 vCPU, 2 cores, and 16 GB of RAM.
-   - Under Boot disk, change the Operating System to Ubuntu and the version to Ubuntu 20.04 LTS. Increase the size to 30 GB. Click on create to create the VM instance.
-   - Under Compute Engine click on VM instances and then Create Instance.
-   - Specify an instance name if required. Change the location if required. The type of instance chosen is 'e2-standard-4' which has 4 vCPU, 2 cores and 16 GB of RAM. 
    - Under Boot disk, change the Operating System to Ubuntu and the version to Ubuntu 20.04 LTS. Increase the size to 30 GB. Click on create to create the VM instance.
 
 4. **Create Service account on GCP**
    - Under the Navigation Menu, hover over IAM and Admin and select Service Accounts.
    - Click on CREATE SERVICE ACCOUNT. Give a Service Account name and description. The account ID should be populated automatically. Click on create and continue.
    - In the second step select all the roles required. For this project, we require the 'Storage Admin' and 'BigQuery Admin' roles. Add these 2 roles and click on done.
-   - Now you can see the created service account. Now click on actions and then manage keys. Click on add key and select Create new key. Select the format as JSON and a JSON file will be downloaded into your local machine. Keep this key safe.
-   - Under Navigation Menu, hower over IAM and Admin and select Service Accounts.
-   - Click on CREATE SERVICE ACCOUNT. Give a Service Account name and description. The account ID should be populated automatically. Click on create and continue.
-   - In the second step select all the roles required. For this project we require the 'Storage Admin' and 'BigQuery Admin' roles. Add these 2 roles and click on done.
    - Now you can see the created service account. Now click on actions and then manage keys. Click on add key and select Create new key. Select the format as JSON and a JSON file will be downloaded into your local machine. Keep this key safe.
 
 5. **Login to the VM**
