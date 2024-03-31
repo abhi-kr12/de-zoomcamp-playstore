@@ -241,4 +241,5 @@ Replication steps are given in accordance with Windows OS and Google Cloud Platf
             </p>
             - The second page of the report consists of three filters category, if app is free or paid and if the app has in app purchases. The bar chart depicts top 10 apps and can be filtered using the 3 filters given. We have a table which consists of all the information filtered by the three filters.
   - You can find the link to the pdf [here](Playstore_Report_-_DE_Zoomcamp.pdf)
+  - The link to the looker studio report can be found [here](https://lookerstudio.google.com/reporting/12cdb2af-6ddb-4c64-9a4d-0cc0817586dd)
 ---
