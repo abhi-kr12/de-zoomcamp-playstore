@@ -116,7 +116,7 @@ Replication steps are given in accordance with Windows OS and Google Cloud Platf
    - use this command to create ssh key "ssh-keygen -t rsa -f ~/.ssh/KEY_FILENAME -C USERNAME -b 2048" where KEY_FILENAME is the key name and USERNAME will be your name
 
 2. **Upload the public SSH key to GCP**
-   - Before uploading the SSH key, enable Compute API, Storage API, and BigQuery API on Google Cloud Platform.
+   - Before uploading the SSH key, create a new project in GCP and enable Compute API, Storage API, and BigQuery API on Google Cloud Platform.
    - Copy the contents of the public SSH key created in the previous step.
    - Under the Navigation Menu, go to Compute Engine. If you scroll under Compute Engine, you should be able to find a tab named Metadata. Click on it. Click on the SSH KEYS tab. Add the copied contents from the public SSH key and save. Whichever instance is created now can be logged in via the same SSH key.
    - Before uploading the SSH key, enable Compute API, Storage API and BigQuery API on Google Cloud Platform.
