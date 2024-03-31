@@ -226,4 +226,18 @@ Replication steps are given in accordance with Windows OS and Google Cloud Platf
     <p align="center">
   <img src="images\dbt_dfd.jpg">
 </p>
+
+13. **Visualizing data with Looker Studio**
+    - Once we have the production data from dbt, we can export the data to Looker Studio for visualization and analysis.
+    - The report consists of two pages :
+        - **First page**
+            <p align="center">
+            <img src="images\playstore_report_page1.jpg">
+            </p>
+            - The first page of the report consists of a bar chart which shows top 10 categories by total number of installs, 3 pie charts which depicts comparison of free and paid apps, comparison of apps with in-app and no in-app puchases and the content ratings distribution respectively.
+        - **Second Page**
+            <p align="center">
+            <img src="images\playstore_report_page2.jpg">
+            </p>
+            - The second page of the report consists of three filters category, if app is free or paid and if the app has in app purchases. The bar chart depicts top 10 apps and can be filtered using the 3 filters given. We have a table which consists of all the information filtered by the three filters.
 ---
