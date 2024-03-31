@@ -224,6 +224,6 @@ Replication steps are given in accordance with Windows OS and Google Cloud Platf
     - After checking if everything is fine in development, create a new environment for deployment. A new production dataset name should be given where the data will be stored. We can then create jobs to run the dbt project. These jobs can run on schedule or can be triggered manually or via an API request.
     - We will have two datasets once everything is done, one from development and one from deployment.
     <p align="center">
-  <img src="images\dfd.jpg">
+  <img src="images\dbt_dfd.jpg">
 </p>
 ---
