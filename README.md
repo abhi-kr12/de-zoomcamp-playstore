@@ -160,25 +160,26 @@ Replication steps are given in accordance with Windows OS and Google Cloud Platf
    - `cd` into `de-zoomcamp-playstore`.
    - Check if all the directories are present which are `Terraform`, `dbt/playstore`, `mage-playstore`, and the files `.gitignore` and `requirements.txt`.
 
-8. **Install Terraform**
-   - Copy the download link for Terraform AMD64 version for Linux from this website [https://developer.hashicorp.com/terraform/install](https://developer.hashicorp.com/terraform/install).
-   - Create a new directory called bin in the VM root.
-   - `cd` into bin and then type in command `wget url` where `url` is the download link copied above.
-   - Type in command `sudo apt-get install unzip` to install unzip in the VM to extract the downloaded zip file.
-   - Unzip the downloaded Terraform zip file which gives an executable file. Now you can delete the Terraform zip file if required.
-   - For Terraform to work we have to insert the bin path as environment variable. Type in command `echo $PATH`. Copy the output and in the end add a colon and the bin directory path. Enter this in command `export PATH=path_value` where `path_value` is concatenated path.
-   - Check if Terraform is working by typing in command `terraform -version`. If a proper version is returned, Terraform is working or else check if the bin has been inserted in the path properly.
-   - Once Terraform is installed, type in `terraform init` to initialize. Then type in `terraform plan` to check what resources will be created. If you notice the bucket name is "playstore-bucket"+local_time. This is done so that the bucket name can be globally unique.
-   - Once you check the plan and satisfied, type in command `terraform apply` and type in yes to create the resources.
-   - Once the use case is finished, you can delete all the resources using `terraform destroy`.
-
-9. **Send service account key to VM**
+8. **Send service account key to VM**
    - Open Git Bash in your local.
    - Navigate to the directory where the service account JSON key is saved.
    - Rename it to 'my_creds_playstore.json'.
    - Now SFTP into the VM using `ssh de-zoomcamp`.
    - `cd` into the `de-zoomcamp-playstore` directory.
    - Now use command `put my_creds_playstore.json` and the file will be copied from local to the `de-zoomcamp-playstore` directory in the VM.
+
+9. **Install Terraform**
+   - Copy the download link for Terraform AMD64 version for Linux from this [website](https://developer.hashicorp.com/terraform/install).
+   - Create a new directory called bin in the VM root.
+   - `cd` into bin and then type in command `wget url` where `url` is the download link copied above.
+   - Type in command `sudo apt-get install unzip` to install unzip in the VM to extract the downloaded zip file.
+   - Unzip the downloaded Terraform zip file which gives an executable file. Now you can delete the Terraform zip file if required.
+   - For Terraform to work we have to insert the bin path as environment variable. Type in command `echo $PATH`. Copy the output and in the end add a colon and the bin directory path. Enter this in command `export PATH=path_value` where `path_value` is concatenated path.
+   - Check if Terraform is working by typing in command `terraform -version`. If a proper version is returned, Terraform is working or else check if the bin has been inserted in the path properly.
+   - Now we need to authenticate the service account key. First we initialise a variable to the path of the service account key using command `export GOOGLE_APPLICATION_CREDENTIALS=~/de-zoomcamp-playstore/my_creds_playstore.json`. Then we authenticate using command `gcloud auth activate-service-account --key-file $GOOGLE_APPLICATION_CREDENTIALS`. We can also hardcode the credentials path in the `main.tf` file but it is not suggested.
+   - Once Terraform is installed, type in `terraform init` to initialize. Then type in `terraform plan` to check what resources will be created. If you notice the bucket name is "playstore-bucket"+local_time. This is done so that the bucket name can be globally unique.
+   - Once you check the plan and are satisfied, type in command `terraform apply` and type in yes to create the resources.
+   - Once the use case is finished, you can delete all the resources using `terraform destroy`.
 
 10. **Install required packages**
     - Install all the required packages using `pip install -r requirements.txt`.
